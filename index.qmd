@@ -1,0 +1,42 @@
+---
+title: "quarto-on-netlify-with-ci"
+---
+
+This is a Quarto website following the tips in <https://appsilon.com/renv-how-to-manage-dependencies-in-r/>.
+
+
+```{r}
+renv::activate()
+```
+
+
+```{r}
+install.packages("quarto")
+```
+
+```{r}
+renv::snapshot()
+```
+
+
+## Pushing Your R Project to GitHub
+
+
+on terminal
+
+```
+git init
+git add .
+git commit -m "initial commit"
+git remote add origin git@github.com:gustavocxavier/quarto-website-netlify-ci.git
+git push -u origin main
+```
+
+```
+git init
+git commit -m "first commit"
+git remote add origin https://github.com/gustavocxavier/quarto-on-netlify-with-ci.git
+git remote add origin git@github.com:gustavocxavier/quarto-on-netlify-with-ci.git
+git push -u origin main
+```
+
